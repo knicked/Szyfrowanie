@@ -1,12 +1,11 @@
 public interface WordLoader {
-
     /**
      * Loads words in the order they appear in the file
      *
      * @param filename
      * @return Array of words
      */
-    String[] loadWords(String filename);
+    String[] loadWordsFromFile(String filename);
 
     /**
      * Loads words in random order
@@ -14,12 +13,12 @@ public interface WordLoader {
      * @param filename
      * @return Array of words
      */
-    String[] loadWordsUnordered(String filename);
+    String[] loadWordsFromFileUnordered(String filename);
     /**
      * Loads words in alphabetic order
      *
      * @param filename
      * @return Array of words
      */
-    String[] loadWordsAlphabetic(String filename);
+    String[] loadWordsFromFileAlphabetic(String filename);
 }
