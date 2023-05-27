@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package cipher;
 
 public class CezarCipher implements  Cipher{
     private int offset;

@@ -1,3 +1,5 @@
+package wordaccess;
+
 public interface WordLoader {
     /**
      * Loads words in the order they appear in the file

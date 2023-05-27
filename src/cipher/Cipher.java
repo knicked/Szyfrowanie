@@ -1,3 +1,5 @@
+package cipher;
+
 public interface Cipher {
     /**
      * Encrypts a single word
