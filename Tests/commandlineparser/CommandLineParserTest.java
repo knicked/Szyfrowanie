@@ -1,6 +1,6 @@
 package commandlineparser;
 
-import cipher.MorsCipher;
+import cipher.MorseCipher;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -17,7 +17,7 @@ class CommandLineParserTest {
                         new String[]{"-e", "-m", "infile", "outfile"},
                         new Parameters(
                                 Action.Encrypt,
-                                new MorsCipher(),
+                                new MorseCipher(),
                                 WordOrder.SameAsInputFile,
                                 "infile",
                                 "outfile")

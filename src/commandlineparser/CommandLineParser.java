@@ -1,8 +1,6 @@
 package commandlineparser;
 
-import cipher.CezarCipher;
-import cipher.Cipher;
-import cipher.MorsCipher;
+import cipher.*;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
@@ -50,7 +48,7 @@ public class CommandLineParser {
                 return new CezarCipher(Integer.parseInt(cmd.getOptionValue("c")));
             }
             else if (cmd.hasOption("m")) {
-                return new MorsCipher();
+                return new MorseCipher();
             }
             else {
                 throw new Exception(
