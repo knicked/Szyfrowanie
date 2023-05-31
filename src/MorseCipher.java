@@ -1,19 +1,19 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class MorsCipher implements Cipher{
-    private final String[] morsCode = {".-",   "-...", "-.-.", "-..",  ".",
+public class MorseCipher implements Cipher{
+    private final String[] morseCode = {".-",   "-...", "-.-.", "-..",  ".",
             "..-.", "--.",  "....", "..",   ".---",
             "-.-",  ".-..", "--",   "-.",   "---",
             ".--.", "--.-", ".-.",  "...",  "-",
             "..-",  "...-", ".--",  "-..-", "-.--",
             "--..", "|" };
-    private Map<String, Character> morsToLetters;
-    public MorsCipher()
+    private Map<String, Character> morseToLetters;
+    public MorseCipher()
     {
-        morsToLetters = new HashMap<>();
+        morseToLetters = new HashMap<>();
         for(int i = 0; i < 26; i++)
-            morsToLetters.put(morsCode[i], (char)('a' + i));
+            morseToLetters.put(morseCode[i], (char)('a' + i));
     }
     public String encrypt(String word)
     {
@@ -25,10 +25,10 @@ public class MorsCipher implements Cipher{
                 char c = word.charAt(i);
                 // A, B, ..., Z
                 if(c >= 65 && c <= 90)
-                    cipheredWord[i] = morsCode[c - 'A'];
+                    cipheredWord[i] = morseCode[c - 'A'];
                 // a, b, ..., z
                 else if(c >= 97 && c <= 122)
-                    cipheredWord[i] = morsCode[c - 'a'];
+                    cipheredWord[i] = morseCode[c - 'a'];
                 else
                     throw new Exception();
             }
@@ -49,7 +49,7 @@ public class MorsCipher implements Cipher{
 
         for(int i = 0; i < splittedMorse.length; i++)
         {
-            decipheredWord[i] = morsToLetters.get(splittedMorse[i]);
+            decipheredWord[i] = morseToLetters.get(splittedMorse[i]);
         }
         return new String(decipheredWord);
     }
